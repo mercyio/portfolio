@@ -19,11 +19,11 @@
   </head>
   <body>
 
-    <!-- <main class="container"> -->
+    <main class="container">
 
     <!-- HEADER DESIGN -->
     <header class="header">
-      <a href="#" class="logo">mercyio</a>
+      <a href="#" class="logo">mercy.io</a>
 
       <i class="fa-solid fa-bars" id="menu-icon"></i>
 
@@ -33,7 +33,7 @@
         <a href="#services" class="active"> Services</a>
         <a href="#portfolio" class="active"> Portfolio</a>
         <a href="#contact" class="active"> Contact</a>
-        <a href="#" class="active"><i class="fa-regular fa-moon"></i></a>
+        <a href="#" class="toggle-dark-mode active"><i class="far fa-moon"></i></a>
       </nav>
     </header>
 
@@ -44,13 +44,14 @@
         <h1>Mercy Vincent</h1>
         <h3>And I'm a <span class="multiple-text"></span></h3>
           <p> A seasoned Backend Software engineer proficient in JavaScript, TypeScript, Node.js, and Nest.js.
-        <div class="social-media">
-          <a href=""><i class="fa-brands fa-facebook"></i></a>
-          <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-          <a href=""><i class="fa-brands fa-linkedin"></i></a>
-          <a href=""><i class="fa-brands fa-github"></i></a>
-          <a href=""><i class="fa-solid fa-envelope-circle-check"></i></a>
-        </div>
+            <div class="social-media">
+              <a href="https://www.facebook.com/yourusername"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://twitter.com/yourusername"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/mercy-vincent-a32841232"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://github.com/mercyio"><i class="fa-brands fa-github"></i></a>
+              <a href="mailto:mercydanke@gmail.com"><i class="fa-solid fa-envelope-circle-check"></i></a>
+            </div>
+            
         <a href="" class="btn">Download CV</a>
       </div>
 
@@ -113,12 +114,11 @@
 
       <div class="portfolio-container">
         <div class="portfolio-box">
-          <img src="./images/Screenshot 2024-01-07 213034.png" alt="" />
+          <img src="./images/tic-tac-toe.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Web Design</h4>
+            <h4>Tic-Tac-Toe</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit,
-              repellat.
+              An interactive gameplay experience with responsive user interface
             </p>
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </div>
@@ -137,7 +137,7 @@
         </div>
 
         <div class="portfolio-box">
-          <img src="./images/ME!!!.jpg" alt="" />
+          <img src="./images/tic-tac-toe.png" alt="" />
           <div class="portfolio-layer">
             <h4>Web Design</h4>
             <p>
@@ -192,7 +192,7 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>me</span></h2>
 
-      <form action="">
+      <!-- <form action="">
         <div class="input-box">
           <input type="text" placeholder="Full Name">
           <input type="email" placeholder="Email Address">
@@ -204,14 +204,47 @@
         </div>
        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
       <input type="submit" value="Send Message" class="btn">
+      </form> -->
+
+      <form id="contact-form">
+        <div class="input-box">
+          <input type="text"  name="from_name" id="fullname" placeholder="Full Name">
+          <input type="email" name="from_email" id="email" placeholder="Email Address">
+        </div>
+    
+        <div class="input-box">
+          <input type="tel" name="from_phone" id="phone" placeholder="Mobile Number">
+          <input type="text" name="subject" id="subject" placeholder="Email Subject">
+        </div>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" id="button" value="Send Message" class="btn">
       </form>
     </section>
 
 
+    <!-- <form id="form">
+      <div class="field">
+        <label for="message">message</label>
+        <input type="text" name="message" id="message">
+      </div>
+      <div class="field">
+        <label for="from_name">from_name</label>
+        <input type="text" name="from_name" id="from_name">
+      </div>
+      <div class="field">
+        <label for="reply_to">reply_to</label>
+        <input type="text" name="reply_to" id="reply_to">
+      </div>
+    
+      <input type="submit" id="button" value="Send Email" >
+    </form> -->
+    
+   
+
     <!-- FOOTER SECTION DESIGN -->
     <footer class="footer">
       <div class="footer-text">
-        <p>Copyright &copy; 2024 by @mercyio | All Rights Reserved.</p>
+        <p>Copyright &copy; 2024 by @mercy.io | All Rights Reserved.</p>
       </div>
 
       <div class="footer-iconTop">
@@ -219,13 +252,23 @@
       </div>
     </footer>
 
-  <!-- </main> -->
+  </main>
     <!-- scroll reveal JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
     
     <!-- scroll reveal JS -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+     <!-- Add the EmailJS library -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('EMGzNe_95Zitr9xs_')
+  </script>
+     
     <!-- MAIN.JS -->
     <script src="./main.js"></script>
     
